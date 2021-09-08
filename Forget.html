@@ -1,0 +1,76 @@
+<html>
+<head>
+	<link rel="stylesheet"href="Foget.css">
+	<title>
+		ForGetPassword
+	</title>
+	<script>
+	function validate()
+  {
+   var name =document.forms["Forgetform"]["User name"];
+   var email=document.forms["Forgetform"]["Email-id"];
+   if (name.value == "")
+    {
+          window.alert("Please enter your username.");
+          name.focus();
+          return false;
+    }
+   if (email.value == "") 
+   {
+          window.alert("Please enter a valid e-mail address.");
+          email.focus();
+          return false;
+    }
+    return false;
+}
+	</script>>
+	<style>
+		h1
+		{
+			text-align: center;
+			font-family: serif;			
+			font-style: italic;
+			background-color:E97451;
+			color:0818A8;
+		}
+		input[type="text"],input[type="email"],input[type="number"],input[type="password"],input[type="submit"],input[type="reset"],input[type="date"]
+		{
+			font-weight: 5px;
+			background-color:yellow;
+		}
+	</style>
+	</head>
+	<body>
+		<h1>Password reset form</h1>
+		<center>
+			<pre>
+			<form mode="post" action="" style="border:5px;align:center;height:500px;width:500px;border-style: dotted;border-color: red;background-color:7FFFD4" name="Forgetform" onsubmit="return validate()">
+				<div id=content><div id=div1  text-align="center"><h3>User Name             :<input type="text" name="username" size="20" placeholder="Enter UserName" font-weight="6px"/>
+   
+  Email-id             :<input type="email" name="email" size="20" placeholder="Enter Email"/>
+
+  Phone Number         :<input type="number" name="phoneNumber" size="20" placeholder="PhoneNumber"/>
+
+   Date of Birth        :<input type="date" name="dateOfBirth"/>
+
+   Security Question    :<select name="Choose your security question:">
+   	                     <option value="choice1">What is your favourite dish</option>
+   	                      <option value="choice2">What is your favourite game</option>
+   	                       <option value="choice3">What is your favourite place</option>
+   	                        <option value="choice4">What is your favourite song</option>
+                           </select>
+
+   Answer                :<input type="text" name="answer" placeholder="Answer"/>
+
+       New Password           :<input type="password" name="password"/>                                                            
+
+   Confirm Password           :<input type="password" name="confirmPassword"/></h3>
+
+
+<input type="submit" value="Submit"/>                  <input type="reset" value="Reset"/>                         
+					</div>                          
+			</form>
+			</pre>
+		</center>
+	</body>
+</html>
